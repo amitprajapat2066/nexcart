@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .checkout-box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            background: #16a34a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="checkout-box">
+
+    <h1>Checkout 🛒</h1>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <label>Name</label>
+        <input type="text"
+               name="name"
+               placeholder="Enter your name"
+               required>
+
+        <label>Mobile Number</label>
+        <input type="tel"
+               name="mobile"
+               placeholder="Enter mobile number"
+               required>
+
+        <label>Address</label>
+        <textarea name="address"
+                  placeholder="Enter your full address"
+                  required></textarea>
+
+        <label>City</label>
+        <input type="text"
+               name="city"
+               placeholder="Enter your city"
+               required>
+
+        <label>Pincode</label>
+        <input type="text"
+               name="pincode"
+               placeholder="Enter pincode"
+               required>
+
+        <button type="submit">
+            Place Order
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
