@@ -25,8 +25,12 @@ SECRET_KEY = 'django-insecure-_#97%96((2*fjz^7()jav53qgi5rhq#r3hx%u4e18)ptfa6pz7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.28.34.27', 'localhost', '127.0.0.1']
-
+ALLOWED_HOSTS = [
+    '172.28.34.27',
+    'localhost',
+    '127.0.0.1',
+    'nexcarts.onrender.com',
+]
 
 # Application definition
 
